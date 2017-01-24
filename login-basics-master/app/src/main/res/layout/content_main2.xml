@@ -9,18 +9,12 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:showIn="@layout/app_bar_main2"
     >
 
-    <TextView
+    <ListView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="두번째"
-        android:id="@+id/txt2"/>
+        android:layout_height="match_parent"
+        android:id="@+id/listView1">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/btn_test"
-        android:text="btn_test"
-        />
+    </ListView>
 
 
 </RelativeLayout>

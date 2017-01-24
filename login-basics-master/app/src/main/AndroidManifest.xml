@@ -55,6 +55,13 @@
             android:theme="@style/AppTheme.NoActionBar"
 
             />
+        <activity android:name=".Roller_Coaster"
+            android:label="Roller_Coaster">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ActivityInfo"
+                />
+        </activity>
     </application>
 
 </manifest>
