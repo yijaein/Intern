@@ -23,6 +23,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -36,7 +37,8 @@ import java.util.List;
  */
 public class ActivityInfo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    ArrayList al = new ArrayList();
+    ArrayList al = new ArrayList();//리스트뷰 담는 어레이리스트
+    Button TimeSorting,NameSorting, LocSorting;// 위치순, 시간순 ,이름순 정렬하는 버튼
 
 
     @Override
@@ -101,10 +103,31 @@ public class ActivityInfo extends AppCompatActivity implements NavigationView.On
             }
         });
 
+    TimeSorting = (Button)findViewById(R.id.TimeSorting);
+        findViewById(R.id.TimeSorting).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });//시간순 정렬
+        LocSorting = (Button)findViewById(R.id.TimeSorting);
+        findViewById(R.id.LocSorting).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });// 위치순으로 정렬
+        NameSorting = (Button)findViewById(R.id.NameSorting);
+        findViewById(R.id.NameSorting).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });//이름순으로 정렬
 
 
 
-    }
+    }//oncreate end=====================================================================================================
 
 
     @Override
@@ -115,7 +138,7 @@ public class ActivityInfo extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
-    }
+    }//뒤로가기 버튼이 눌리면 한번 더 물어봐아아아
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

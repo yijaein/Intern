@@ -8,10 +8,42 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior" tools:showIn="@layout/app_bar_main2"
     >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="이름순"
+        android:id="@+id/NameSorting"/>
+
+
+    <Button
+        android:layout_width="120dp "
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="시간순"
+        android:id="@+id/TimeSorting"/>
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="위치순"
+        android:id="@+id/LocSorting"/>
+
+
+
+
+</LinearLayout>
+
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
         android:id="@+id/listView1">
 
     </ListView>
