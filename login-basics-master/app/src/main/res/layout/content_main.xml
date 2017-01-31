@@ -22,17 +22,17 @@
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:id="@+id/btn1"
-            android:text="button2-1" />
+            android:text="어트랙션예약" />
         <Button
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:id="@+id/btn2"
-            android:text="button2-2" />
+            android:text="이용권구매" />
         <Button
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:id="@+id/btn3"
-            android:text="button2-3" />
+            android:text="빠른탑승" />
 
         <Button
             android:layout_width="100dp"
@@ -44,7 +44,7 @@
             android:layout_width="100dp"
             android:layout_height="80dp"
             android:id="@+id/btn5"
-            android:text="button2-5" />
+            android:text="이벤트" />
     </LinearLayout>
 
 

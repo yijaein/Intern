@@ -74,12 +74,13 @@ public class ActivityInfo extends AppCompatActivity implements NavigationView.On
         at.name = "top";
         at.run = true;
         at.ATTinfo = "롤러코스터 정보";
+        //리스트 뷰 추가
         al.add(at);
-        al.add(new ATT(R.drawable.parbin,"a",true,"말이 돌아감"));
-        al.add(new ATT(R.drawable.parbin,"b",true,"그래"));
-        al.add(new ATT(R.drawable.parbin,"c",true,"용이나옴"));
-        al.add(new ATT(R.drawable.parbin,"c",true,"왕아ㅘㅘ아"));
-        al.add(new ATT(R.drawable.parbin,"d",true,"목이 돌아감"));
+        al.add(new ATT(R.drawable.parbin,"청룔열차",true,"말이 돌아감"));
+        al.add(new ATT(R.drawable.parbin,"자이로드롭",true,"그래"));
+        al.add(new ATT(R.drawable.parbin,"회전목마",true,"용이나옴"));
+        al.add(new ATT(R.drawable.parbin,"범퍼카",true,"왕아ㅘㅘ아"));
+        al.add(new ATT(R.drawable.parbin,"후룸라이드",true,"목이 돌아감"));
 
 
 
@@ -107,7 +108,7 @@ public class ActivityInfo extends AppCompatActivity implements NavigationView.On
         findViewById(R.id.TimeSorting).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+            //소팅하는 방법 찾아서 추가할 것
             }
         });//시간순 정렬
         LocSorting = (Button)findViewById(R.id.TimeSorting);

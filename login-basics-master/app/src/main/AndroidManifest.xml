@@ -62,6 +62,11 @@
                 android:value=".ActivityInfo"
                 />
         </activity>
+
+        <activity android:name=".Buy_Utilize"
+            android:label="이용권구매"
+
+            />
     </application>
 
 </manifest>

@@ -80,6 +80,9 @@ public class MainActivity extends AppCompatActivity
         findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+            //이용권 구매
+            Intent intent2 =  new Intent(MainActivity.this,Buy_Utilize.class);
+                startActivity(intent2);
 
             }
         });
