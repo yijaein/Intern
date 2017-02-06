@@ -1,16 +1,21 @@
 package bscorp.appbase;
 
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Html;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by jan on 2017-01-26.
@@ -28,6 +33,7 @@ public class Buy_Utilize extends AppCompatActivity {//이용권구매
         setContentView(R.layout.buy_utilize);
 
 
+        int i = 0;
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
@@ -46,7 +52,7 @@ public class Buy_Utilize extends AppCompatActivity {//이용권구매
             @Override
             public void onClick(View v) {
                 //구매하기 기능(액티비티)가 나오고 구매가 완료되면 이미지가 바뀐다.
-
+                DialogHtmlView();
             }
         });
 
@@ -54,6 +60,28 @@ public class Buy_Utilize extends AppCompatActivity {//이용권구매
             @Override
             public void onClick(View v) {
                 //이것도 누르면 구매하기 기능이 나오고 이미지가 바뀐다? 추가된다 ?
+                DialogHtmlView1();
+            }
+        });
+
+        buy_ticket_Btn.setOnClickListener(new View.OnClickListener() {//티켓사기 버튼
+            @Override
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(Buy_Utilize.this, "complete buying ticket", Toast.LENGTH_SHORT);
+                toast.show();// 확인 버튼을 눌렀을 때 구입됬다는 토스트 메시지 출력
+                Intent intent = new Intent(Buy_Utilize.this,MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        cancle_buy_ticket.setOnClickListener(new View.OnClickListener() {// 티켓 취소 버튼
+            @Override
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(Buy_Utilize.this, "cancel buying ticket", Toast.LENGTH_SHORT);
+                toast.show();// 확인 버튼을 눌렀을 때 구입됬다는 토스트 메시지 출력
+                Intent intent = new Intent(Buy_Utilize.this,MainActivity.class);
+                startActivity(intent);
 
             }
         });
@@ -61,10 +89,6 @@ public class Buy_Utilize extends AppCompatActivity {//이용권구매
 
     }//end oncreate
 
-    private void changeIMG(){
-        //이 메소드는 누를 시 이미지 버튼의 이미지를 바꾼다
-        //일단 결제창을 띄운뒤 거기서 결제가 완료되면 이미지를 추가한다.
-    }
 
 
 
@@ -79,5 +103,37 @@ public class Buy_Utilize extends AppCompatActivity {//이용권구매
                 return super.onOptionsItemSelected(item);
 
         }
+    }
+
+    private void DialogHtmlView() {//슬롯 구매 다이얼로그
+        AlertDialog.Builder ab = new AlertDialog.Builder(Buy_Utilize.this);
+        ab.setMessage(Html.fromHtml("<strong><font color=\"#ff0000\"> " + "Html 표현여부 "
+                + "</font></strong><br>Do you want to buy this slot?"));
+        ab.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast toast = Toast.makeText(Buy_Utilize.this, "complete buying slot", Toast.LENGTH_LONG);
+                toast.show();// 확인 버튼을 눌렀을 때 구입됬다는 토스트 메시지 출력
+                ticketBtn3.setImageResource(R.drawable.parbin3);
+
+            }
+        });
+
+        ab.show();
+    }
+    private void DialogHtmlView1() {//슬롯 구매 다이얼로그
+        AlertDialog.Builder ab = new AlertDialog.Builder(Buy_Utilize.this);
+        ab.setMessage(Html.fromHtml("<strong><font color=\"#ff0000\"> " + "Html 표현여부 "
+                + "</font></strong><br>Do you want to buy this slot?"));
+        ab.setPositiveButton("ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast toast = Toast.makeText(Buy_Utilize.this, "complete buying slot", Toast.LENGTH_LONG);
+                toast.show();// 확인 버튼을 눌렀을 때 구입됬다는 토스트 메시지 출력
+                ticketBtn4.setImageResource(R.drawable.parbin3);
+            }
+        });
+
+        ab.show();
     }
 }//end class

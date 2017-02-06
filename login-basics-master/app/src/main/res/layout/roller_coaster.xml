@@ -6,7 +6,7 @@
 <ImageView
     android:layout_width="match_parent"
     android:layout_height="150dp"
-    android:src="@drawable/parbin2"
+    android:src="@drawable/t_express"
     android:id="@+id/att_image1"
     />
 
@@ -90,9 +90,9 @@
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="250dp"
-            android:src="@drawable/parbin"
+            android:layout_width="344dp"
+            android:layout_height="223dp"
+            android:src="@drawable/everlandmap_1"
             android:id="@+id/att_map"
             />
 
@@ -124,5 +124,23 @@
             android:layout_marginLeft="30dp"
             android:id="@+id/find_myloc"
             android:text="길찾기"/>
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/alarmBtn"
+            android:text="ALARM"/>
+
+
+
     </LinearLayout>
 </LinearLayout>

@@ -51,14 +51,14 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:id="@+id/buy_ticket_btn"
-        android:text="이용권구매"/>
+        android:text="buy"/>
 
         <Button
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:id="@+id/cancle_buy_ticket"
-            android:text="취소하기"/>
+            android:text="cancel"/>
 
 
 

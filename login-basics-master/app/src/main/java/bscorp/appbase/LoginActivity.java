@@ -117,6 +117,11 @@ public class LoginActivity extends AppCompatActivity implements
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_login);
 
+       // 스플레시
+        Intent intent1 = new Intent(this,Splash_Activity.class);
+        startActivity(intent1);
+
+
         initInstances();
     }
 

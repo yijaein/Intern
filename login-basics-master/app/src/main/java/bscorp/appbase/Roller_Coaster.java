@@ -1,23 +1,31 @@
 package bscorp.appbase;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.net.URL;
+
+import telephony.AlarmActivity;
+
 
 /**
  * Created by jan on 2017-01-24.
  */
 public class Roller_Coaster extends AppCompatActivity {
     private ImageView img;
-    Button reservation_btn,find_myloc;
+    Button reservation_btn,find_myloc,alarmBtn;
     TextView left_peopleview1,left_peopleview2,waiting_time1,waiting_time2;
     ImageView attImg,attMap;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +47,26 @@ public class Roller_Coaster extends AppCompatActivity {
         attImg = (ImageView)findViewById(R.id.att_image1);//놀이기구 사진
         attMap =(ImageView)findViewById(R.id.att_map);//놀이기구 가는 지도 정보
 
+        alarmBtn =(Button)findViewById(R.id.alarmBtn);
+
+        alarmBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Roller_Coaster.this, AlarmActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        find_myloc = (Button)findViewById(R.id.find_myloc);
+        find_myloc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+        Intent intent = new Intent(Roller_Coaster.this,Map.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }//oncreadte end
 
@@ -57,5 +85,8 @@ public class Roller_Coaster extends AppCompatActivity {
 
         }
     }
+
+
+
 
 }
