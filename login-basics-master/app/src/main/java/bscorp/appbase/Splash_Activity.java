@@ -10,7 +10,7 @@ import android.os.Message;
  */
 
 public class Splash_Activity extends Activity {
-//·Î±×ÀÎÈ­¸é
+//ë¡œê·¸ì¸í™”ë©´
 
 
 
@@ -27,7 +27,7 @@ public class Splash_Activity extends Activity {
             }
         };
 
-            //3ÃÊÈÄ ²¨Áü
+            //3ì´ˆí›„ êº¼ì§
             handler.sendEmptyMessageDelayed(0,3000);
 
 
